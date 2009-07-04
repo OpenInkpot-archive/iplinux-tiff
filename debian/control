@@ -1,0 +1,34 @@
+Source: tiff
+Section: core
+Priority: optional
+Maintainer: Mikhail Gusarov <dottedmag@dottedmag.net>
+Build-Depends: cdbs, cdbs-embedded, quilt, debhelper (>= 5), zlib1g-dev, libjpeg62-dev
+XCS-Cross-Host-Build-Depends: cdbs, quilt, debhelper (>= 5)
+XCS-Cross-Build-Depends: libz1-dev, libjpeg62-dev
+Standards-Version: 3.8.2
+Homepage: http://libtiff.maptools.org
+
+Package: libtiff3
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Tag Image File Format (TIFF) library
+ libtiff is a library providing support for the Tag Image File Format
+ (TIFF), a widely used format for storing image data.  This package
+ includes the shared library.
+
+Package: libtiffxx0
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Tag Image File Format (TIFF) library -- C++ interface
+ libtiff is a library providing support for the Tag Image File Format
+ (TIFF), a widely used format for storing image data.  This package
+ includes the shared library for the experimental C++ interfaces.
+
+Package: libtiff3-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends}, libtiff3 (= ${binary:Version}), libtiffxx0 (= ${binary:Version})
+Description: Tag Image File Format library (TIFF), development files
+ libtiff is a library providing support for the Tag Image File Format
+ (TIFF), a widely used format for storing image data.  This package
+ includes the development files, static library, and header files.

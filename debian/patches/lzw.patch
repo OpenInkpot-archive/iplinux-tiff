@@ -1,0 +1,22 @@
+Index: tiff-3.8.2/libtiff/tif_lzw.c
+===================================================================
+--- tiff-3.8.2.orig/libtiff/tif_lzw.c	2009-06-28 12:17:47.625264945 -0400
++++ tiff-3.8.2/libtiff/tif_lzw.c	2009-06-28 12:19:09.913264599 -0400
+@@ -422,7 +422,7 @@
+ 			NextCode(tif, sp, bp, code, GetNextCode);
+ 			if (code == CODE_EOI)
+ 				break;
+-			 if (code == CODE_CLEAR) {
++			 if (code >= CODE_CLEAR) {
+ 				 TIFFErrorExt(tif->tif_clientdata, tif->tif_name,
+ 				 "LZWDecode: Corrupted LZW table at scanline %d",
+ 				 tif->tif_row);
+@@ -626,7 +626,7 @@
+ 			NextCode(tif, sp, bp, code, GetNextCodeCompat);
+ 			if (code == CODE_EOI)
+ 				break;
+-			 if (code == CODE_CLEAR) {
++			 if (code >= CODE_CLEAR) {
+ 				 TIFFErrorExt(tif->tif_clientdata, tif->tif_name,
+ 				 "LZWDecode: Corrupted LZW table at scanline %d",
+ 				 tif->tif_row);
