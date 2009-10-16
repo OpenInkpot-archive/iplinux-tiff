@@ -1,0 +1,2 @@
+debian/tmp/usr/lib/libtiff.so
+debian/tmp/usr/include/*.h
