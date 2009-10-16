@@ -1,3 +1,14 @@
+tiff (3.9.1-1) asimov; urgency=low
+
+  * New upstream release.
+  * Regenerate autocrap and pass correct --host
+  * Require cdbs-embedded to actually build target binaries
+  * Introduce tiff-utils with, erm, TIFF utils
+  * Split libtiff3-dev to libtiff-dev and libtiffxx-dev
+  * Introduce debugging symbols package
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Sat, 17 Oct 2009 04:39:50 +0700
+
 tiff (3.8.2-12.ip2) asimov; urgency=low
 
   * Rebuild with new libgcc1.
